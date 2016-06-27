@@ -1,11 +1,15 @@
 class Fixnum
   define_method(:ping_pong) do
-    # number_array = []
+    number_array = []
     input = (1..self).to_a
-    # if(self % 3 == 0)
-    #   number_array.push("ping")
-    # end
-    # number_array.push(1..self)
+    input.each() do |number|
+      if number.%(3) == 0
+        number_array.push("ping")
+      else
+        number_array.push(number)
+      end
+    end
+    number_array
   end
 end
 
